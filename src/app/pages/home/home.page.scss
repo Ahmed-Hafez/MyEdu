@@ -1,0 +1,137 @@
+@import "src/theme/variables.scss";
+
+.container {
+  padding: 50px 150px;
+}
+
+section:first-of-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 100px;
+
+  .section-container {
+    width: 768px;
+
+    .section-title {
+      margin: 30px 0;
+
+      font-weight: 900;
+      font-size: 56px;
+      line-height: 120%;
+      text-shadow: 2px 2px 0px #896af9;
+      text-align: center;
+    }
+
+    .section-content {
+      font-size: 1.5rem;
+      line-height: 150%;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .shadow-btn {
+      margin: 0 auto;
+    }
+  }
+
+  .image-container {
+    margin: 100px 0 120px;
+  }
+}
+
+div.softYellow-bg {
+  background-image: url(/assets/svgs/colorful-toys.svg);
+  background-size: cover;
+  height: 1010px;
+
+  section {
+    padding-top: 140px;
+  }
+  .section-container {
+
+    width: 768px;
+    h6 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .section-title.basic {
+      font-weight: 700;
+      font-size: 3rem;
+
+      line-height: 120%;
+      text-align: center;
+      text-shadow: none;
+
+      color: $black;
+    }
+
+    .section-content {
+      font-weight: 400;
+      font-size: 1.5rem;
+      line-height: 150%;
+      color: $black;
+
+      margin-bottom: 120px;
+    }
+  }
+
+  .steps {
+    justify-content: space-between;
+    max-width: 1312px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+
+    .step {
+      display: flex;
+      .image {
+        border-radius: 50%;
+        width: 98px;
+        height: 98px;
+      }
+
+      span {
+        text-align: center;
+        width: 405px;
+
+        &.step-title {
+          text-transform: capitalize;
+          font-size: 2rem;
+        }
+        &.step-description {
+          margin-top: 20px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+
+.footer {
+  margin: 50px 0;
+  padding: 0 50px;
+
+  hr {
+    background: $black;
+    margin-bottom: 20px;
+  }
+
+  .footer-content {
+    justify-content: space-between;
+
+    * {
+      font-weight: 300;
+    }
+
+    .links {
+      gap: 15px;
+      a {
+        color: $black;
+      }
+    }
+  }
+}

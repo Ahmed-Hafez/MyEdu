@@ -1,0 +1,57 @@
+<ion-content [fullscreen]="true">
+  <app-header></app-header>
+  <div class="container lightLavender-bg">
+    <section>
+      <div class="section-container">
+        <p class="section-title">Discover the magic of our surprise box</p>
+        <p class="section-content">
+          Unleash your child's curiosity with our educational subscription box
+          filled with fun and learning.
+        </p>
+        <button class="shadow-btn">Subscribe Now</button>
+      </div>
+      <div class="image-container">
+        <img src="assets/images/colorful-toys-1.png" alt="colorful-toys" />
+      </div>
+    </section>
+  </div>
+  <div class="softYellow-bg">
+    <section>
+      <div class="section-container">
+        <h6>Discover</h6>
+        <p class="section-title basic">
+          How It Works: Subscribe and Receive Your Surprise Box
+        </p>
+        <p class="section-content">
+          Subscribe to our surprise subscription box and give your child the gift
+          of learning. Each month, we curate a box filled with educational
+          materials tailored to your child's age and interests.
+        </p>
+      </div>
+    </section>
+    <div class="steps d-flex">
+      @for (step of steps; track $index) {
+        <div class="step d-flex f-center f-column">
+          <div class="image">
+            <img [src]="'/assets/images/step'+($index+1)+'.png'" [alt]="'step' + $index">
+          </div>
+          <span class="step-title">Step {{$index}}</span>
+          <span class="step-title">{{step.title}}</span>
+          <span class="step-description">{{step.description}}</span>
+        </div>
+      }
+    </div>
+    <button class="shadow-btn m-center">Subscribe Now</button>
+  </div>
+  <div class="footer">
+    <hr/>
+    <div class="footer-content d-flex">
+      <div class="links d-flex">
+        <a href="">Privacy policy</a>
+        <a href="">Terms of service</a>
+        <a href="">Cookies Settings</a>
+      </div>
+      <span>&copy; 2023 MyEdu. All rights reserved.</span>
+    </div>
+  </div>
+</ion-content>
