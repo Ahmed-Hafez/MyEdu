@@ -1,0 +1,18 @@
+@import "colors";
+
+.shadow-btn {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  background: $white;
+  color: $lightLavender;
+  box-shadow: 4px 4px 0px -1px $lightLavender;
+
+  padding: 15px 26px;
+  border-radius: 24px;
+
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 38px;
+}
