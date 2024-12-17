@@ -24,8 +24,10 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+@import "primeicons/primeicons.css";
 
 @import "./theme/buttons.scss";
+@import "./theme/prime-ng-normalize.scss";
 
 html, body {
   // That's to ensure that and let incoming developers knows that
@@ -76,4 +78,29 @@ body * {
 
 .softYellow-bg {
   background: $softYellow;
+}
+
+.thin-font {
+  font-weight: 400;
+}
+
+input {
+  @extend .thin-font;
+}
+
+.form-container {
+  gap: 15px;
+
+  label {
+    font-size: 0.875rem;
+  }
+
+  input + small {
+    margin-inline-start: 15px;
+    text-align: start;
+  }
+
+  .error {
+    color: $error;
+  }
 }

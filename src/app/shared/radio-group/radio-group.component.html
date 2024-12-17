@@ -1,0 +1,26 @@
+<div class="form-container d-flex f-column">
+  <label class="thin-font">{{ title() }}</label>
+  <div class="d-flex">
+    <div class="radio-group d-flex">
+      @for (option of options(); track $index) {
+        @if (optionLabel() && optionValue()) {
+          <label class="radio-card">
+            <input type="radio" [name]="controlName()" [value]="option[optionValue()!]" />
+            <div class="radio-content d-flex">
+              <span class="thin-font">{{option[optionLabel()!]}}</span>
+              <i class="pi pi-check-circle"></i>
+            </div>
+          </label>
+        } @else {
+          <label class="radio-card">
+            <input type="radio" [name]="controlName()" [value]="option" />
+            <div class="radio-content d-flex">
+              <span class="thin-font">{{option}}</span>
+              <i class="pi pi-check-circle"></i>
+            </div>
+          </label>
+        }
+      }
+    </div>
+  </div>
+</div>

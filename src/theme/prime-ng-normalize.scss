@@ -1,0 +1,47 @@
+@import "colors";
+
+:root {
+  --p-inputtext-focus-border-color: #{$lightLavender} !important;
+  --p-togglebutton-background: #{$white} !important;
+  --p-togglebutton-checked-background: #{$white} !important;
+  --p-togglebutton-content-checked-background: #{$softLavender} !important;
+  --p-togglebutton-hover-background: transparent !important;
+  --p-togglebutton-hover-color: #{$lightLavender} !important;
+}
+
+.p-inputtext:enabled:focus {
+  border-width: 2px;
+}
+
+body [class*="p-"] {
+  font-weight: 400 !important;
+}
+
+.p-togglebutton.p-togglebutton-checked .p-togglebutton-label {
+  color: $lightLavender;
+}
+
+.p-togglebutton {
+  border: none !important;
+}
+
+.p-togglebutton.p-togglebutton-checked {
+  border: 1px solid $lightLavender;
+}
+
+.p-togglebutton {
+  border: 1px solid #ccc;
+}
+
+.p-togglebutton:hover {
+  border: 1px solid $lightLavender;
+}
+
+.p-togglebutton {
+  border: 1px solid #ccc !important;
+  border-radius: 15px !important;
+}
+
+.p-selectbutton {
+  gap: 7px;
+}

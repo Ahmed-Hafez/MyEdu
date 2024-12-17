@@ -1,0 +1,126 @@
+@import "src/theme/variables.scss";
+
+.parent-container {
+  height: 100%;
+}
+
+.logo {
+  width: 63px;
+  height: 27px;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  background-size: cover;
+  background-image: url(/assets/images/subscribe-cover.jpg);
+
+  .content {
+    margin: auto;
+    width: 100%;
+    max-width: 1012px;
+    filter: drop-shadow(0px 0px 52px rgba(185, 169, 205, 0.7));
+    $borderRadius: 24px;
+
+    .hint {
+      font-size: 0.875rem;
+      font-weight: 300;
+    }
+    small {
+      font-size: 0.75rem;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    .main {
+      flex: 2;
+      padding: 32px;
+      background: $white;
+      border-top-left-radius: $borderRadius;
+      border-bottom-left-radius: $borderRadius;
+
+      h3.title {
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      .form-container {
+
+        input + small {
+          margin-top: 5px;
+          text-align: start;
+        }
+
+        .date {
+          gap: 5px;
+          p-select {
+            width: 100%;
+          }
+        }
+      }
+
+      .shadow-btn {
+        font-size: 1rem;
+        line-height: 20px;
+        border-radius: 18px;
+        border: 1px solid $lightLavender;
+        margin-top: 50px;
+        flex: 1;
+      }
+    }
+    .summary {
+      flex: 1;
+      background: $softLavender;
+      padding: 32px;
+      width: 100%;
+      max-width: 400px;
+      min-width: 250px;
+      border-top-right-radius: $borderRadius;
+      border-bottom-right-radius: $borderRadius;
+
+      .mystery-box {
+        background: $white;
+        border-radius: 8px;
+        padding: 10px 10px 30px;
+        margin-block: 15px;
+        justify-content: space-between;
+      }
+
+      .totals {
+        gap: 7px;
+
+        hr {
+          background: $black;
+          border-width: 1px;
+        }
+
+        .d-flex {
+          justify-content: space-between;
+        }
+
+        .title {
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+}
+
+.container.footer {
+  margin-top: auto;
+  padding: 50px 150px;
+
+  .d-flex {
+    justify-content: space-between;
+
+    .copy-rights {
+      font-weight: 300;
+      font-family: "Inter", sans-serif;
+      font-style: normal;
+      line-height: 150%;
+    }
+  }
+}

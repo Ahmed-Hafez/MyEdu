@@ -1,0 +1,50 @@
+@import "src/theme/variables.scss";
+
+.radio-group {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+
+/* Hide the default radio input */
+.radio-card input[type="radio"] {
+  display: none;
+}
+
+/* Style for the label (radio card) */
+.radio-card {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 18px;
+  color: $black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: $white;
+  flex: 1;
+}
+
+/* Add hover effect */
+.radio-card:hover {
+  border-color: $lightLavender;
+}
+
+/* Add active (checked) styles */
+.radio-card input[type="radio"]:checked + .radio-content {
+  color: $lightLavender;
+  background-color: $softLavender;
+  border-radius: 8px;
+  border-color: $lightLavender;
+}
+
+/* Content inside the card */
+.radio-content {
+  gap: 20px;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  justify-content: space-between;
+}

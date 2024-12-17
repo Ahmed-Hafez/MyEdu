@@ -1,0 +1,129 @@
+<ion-content [fullscreen]="true">
+  <div class="parent-container d-flex f-column">
+    <div class="container">
+      <app-header></app-header>
+    </div>
+    <div class="content-container">
+      <div class="content d-flex">
+        <section class="main">
+          <h2 class="title">Subscribe</h2>
+          <small class="hint">to our Monthly Surprice Box</small>
+          <hr />
+          <h3 class="title">Contact Information</h3>
+          <div class="form-container d-flex f-column">
+            <div class="d-flex f-column">
+              <label class="thin-font" for="name">Your Name</label>
+              <input pInputText id="name" placeholder="e.g Osama Alshathri" />
+              <small class="error"
+                >Error Messages will go here</small
+              >
+            </div>
+            <div class="d-flex f-column">
+              <label class="thin-font" for="email">Email</label>
+              <input pInputText id="email" placeholder="Osama@gmail.com" />
+              <small class="error"
+                >Error Messages will go here</small
+              >
+            </div>
+          </div>
+          <h3 class="title">Child's Information</h3>
+          <div class="form-container d-flex f-column">
+            <div class="d-flex f-column">
+              <label class="thin-font" for="child-name"
+                >Child's Full Name</label
+              >
+              <input
+                pInputText
+                id="child-name"
+                placeholder="e.g Sara Mohammad"
+              />
+              <small class="error"
+                >Error Messages will go here</small
+              >
+            </div>
+            <div class="form-container d-flex f-column">
+              <label class="thin-font">Child's Date of Birth</label>
+              <div class="date d-flex">
+                <p-select
+                  [options]="dates"
+                  placeholder="Date"
+                  class="w-full md:w-56"
+                />
+                <p-select
+                  [options]="months"
+                  placeholder="Month"
+                  class="w-full md:w-56"
+                />
+                <p-select
+                  [options]="years"
+                  placeholder="Year"
+                  class="w-full md:w-56"
+                />
+              </div>
+            </div>
+            <div class="form-container d-flex f-column">
+              <label class="thin-font">Grade</label>
+              <p-select
+                [options]="[1,2,3,4]"
+                placeholder="e.g Grade 2"
+                class="w-full md:w-56"
+              />
+            </div>
+            <app-radio-group title="Gender" controlName="gender" [options]="['Boy', 'Girl']"></app-radio-group>
+            <h3 class="title">As a parent select any 3 topics</h3>
+            <div class="form-container d-flex">
+              <p-selectbutton [options]="topics" [multiple]="true" />
+            </div>
+          </div>
+
+          <div class="d-flex">
+            <button class="shadow-btn">Continue to Payment</button>
+          </div>
+        </section>
+        <section class="summary">
+          <h4 class="title">Summary</h4>
+          <small class="hint">of your Monthly Surprice Box</small>
+          <div class="mystery-box d-flex">
+            <div class="d-flex f-column">
+              <span>Mystery Box</span>
+              <small>x 1</small>
+            </div>
+            <div class="d-flex f-column">
+              <span class="thin-font">SAR <b>456</b></span>
+              <small>Monthly</small>
+            </div>
+          </div>
+          <div class="totals d-flex f-column">
+            <div class="d-flex">
+              <span class="title thin-font">Subtotal</span>
+              <span class="thin-font">SAR <b>456</b></span>
+            </div>
+            <div class="d-flex">
+              <span class="title thin-font">Shipping</span>
+              <span class="thin-font">Free</span>
+            </div>
+            <div class="d-flex">
+              <span class="title thin-font">Taxes</span>
+              <span class="thin-font"
+                >SAR <b>{{ 4 | number: '1.1-3' }}</b></span
+              >
+            </div>
+            <hr />
+            <div class="d-flex">
+              <b>Total</b>
+              <span class="thin-font">SAR <b>456</b></span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="footer container">
+      <div class="d-flex">
+        <div class="image logo">
+          <img src="assets/svgs/logo-dark.svg" alt="logo" />
+        </div>
+        <p class="copy-rights">&copy; 2077 MyEdu</p>
+      </div>
+    </div>
+  </div>
+</ion-content>
