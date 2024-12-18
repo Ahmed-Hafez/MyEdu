@@ -2,6 +2,10 @@
 
 .container {
   padding: 50px 150px;
+
+  @media (max-width: 1024px) {
+    padding: 0;
+  }
 }
 
 section:first-of-type {
@@ -13,6 +17,11 @@ section:first-of-type {
 
   .section-container {
     width: 768px;
+
+    @media (max-width: 1024px) {
+      width: 100%;
+      padding-inline: 15px;
+    }
 
     .section-title {
       margin: 30px 0;
@@ -44,14 +53,24 @@ section:first-of-type {
 div.softYellow-bg {
   background-image: url(/assets/svgs/colorful-toys.svg);
   background-size: cover;
-  height: 1010px;
+  min-height: 1010px;
+  padding-bottom: 30px;
+
+  @media (max-width: 992px) {
+    background-image: none;
+  }
 
   section {
     padding-top: 140px;
   }
   .section-container {
-
     width: 768px;
+
+    @media (max-width: 1024px) {
+      width: 100%;
+      padding-inline: 15px;
+    }
+
     h6 {
       text-align: center;
       margin-bottom: 20px;
@@ -85,17 +104,28 @@ div.softYellow-bg {
     margin: 0 auto;
     padding-bottom: 50px;
 
+    @media (max-width: 1440px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
     .step {
       display: flex;
       .image {
         border-radius: 50%;
         width: 98px;
         height: 98px;
+        overflow: hidden;
       }
 
       span {
         text-align: center;
         width: 405px;
+        @media (max-width: 425px) {
+          width: 100%;
+          padding: 0 15px;
+        }
 
         &.step-title {
           text-transform: capitalize;
@@ -110,7 +140,6 @@ div.softYellow-bg {
   }
 }
 
-
 .footer {
   margin: 50px 0;
   padding: 0 50px;
@@ -123,12 +152,23 @@ div.softYellow-bg {
   .footer-content {
     justify-content: space-between;
 
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+
     * {
       font-weight: 300;
     }
 
     .links {
       gap: 15px;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 30px;
+      }
+
       a {
         color: $black;
       }
