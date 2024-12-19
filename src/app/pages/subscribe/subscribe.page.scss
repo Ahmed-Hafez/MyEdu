@@ -25,6 +25,16 @@
     filter: drop-shadow(0px 0px 52px rgba(185, 169, 205, 0.7));
     $borderRadius: 24px;
 
+    @media (max-width: 575px) {
+      margin: 50px 20px;
+    }
+    @media (min-width: 576px) {
+      margin: auto 20px;
+    }
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
+
     .hint {
       font-size: 0.875rem;
       font-weight: 300;
@@ -42,6 +52,11 @@
       border-top-left-radius: $borderRadius;
       border-bottom-left-radius: $borderRadius;
 
+      @media (max-width: 1024px) {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: $borderRadius;
+      }
+
       h3.title {
         margin-top: 20px;
         margin-bottom: 10px;
@@ -56,8 +71,10 @@
 
         .date {
           gap: 5px;
+          flex-wrap: wrap;
+
           p-select {
-            width: 100%;
+            flex: 1;
           }
         }
       }
@@ -80,6 +97,13 @@
       min-width: 250px;
       border-top-right-radius: $borderRadius;
       border-bottom-right-radius: $borderRadius;
+
+      @media (max-width: 1024px) {
+        flex: 2;
+        border-bottom-left-radius: $borderRadius;
+        border-top-right-radius: 0;
+        max-width: 100%;
+      }
 
       .mystery-box {
         background: $white;
@@ -112,6 +136,10 @@
 .container.footer {
   margin-top: auto;
   padding: 50px 150px;
+
+  @media (max-width: 1024px) {
+    padding-inline: 25px;
+  }
 
   .d-flex {
     justify-content: space-between;
