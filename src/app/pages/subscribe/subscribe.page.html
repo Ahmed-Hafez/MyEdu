@@ -43,23 +43,7 @@
             </div>
             <div class="form-container d-flex f-column">
               <label class="thin-font">Child's Date of Birth</label>
-              <div class="date d-flex">
-                <p-select
-                  [options]="dates"
-                  placeholder="Date"
-                  class="w-full md:w-56"
-                />
-                <p-select
-                  [options]="months"
-                  placeholder="Month"
-                  class="w-full md:w-56"
-                />
-                <p-select
-                  [options]="years"
-                  placeholder="Year"
-                  class="w-full md:w-56"
-                />
-              </div>
+              <app-date-select-input></app-date-select-input>
             </div>
             <div class="form-container d-flex f-column">
               <label class="thin-font">Grade</label>

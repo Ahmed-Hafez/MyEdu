@@ -12,6 +12,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { Select } from 'primeng/select';
 import { SelectButton } from 'primeng/selectbutton';
 import { RadioGroupComponent } from 'src/app/shared/radio-group/radio-group.component';
+import { DateSelectInputComponent } from 'src/app/shared/date-select-input/date-select-input.component';
 
 @Component({
   selector: 'app-subscribe',
@@ -29,30 +30,11 @@ import { RadioGroupComponent } from 'src/app/shared/radio-group/radio-group.comp
     InputTextModule,
     Select,
     SelectButton,
-    RadioGroupComponent
+    RadioGroupComponent,
+    DateSelectInputComponent
   ],
 })
 export class SubscribePage {
-  dates: number[] = Array.from({ length: 31 }, (_, i) => i + 1);
-  months: string[] = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
-  ];
-  years: number[] = Array.from(
-    { length: new Date().getFullYear() - 2000 + 1 },
-    (_, i) => 2000 + i
-  );
-
   topics: string[] = [
     'Arabic',
     'Islamic',

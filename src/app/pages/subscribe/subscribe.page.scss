@@ -62,21 +62,9 @@
         margin-bottom: 10px;
       }
 
-      .form-container {
-
-        input + small {
-          margin-top: 5px;
-          text-align: start;
-        }
-
-        .date {
-          gap: 5px;
-          flex-wrap: wrap;
-
-          p-select {
-            flex: 1;
-          }
-        }
+      .form-container .error {
+        margin-top: 5px;
+        text-align: start;
       }
 
       .shadow-btn {
