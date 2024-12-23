@@ -1,3 +1,3 @@
-<p-select [options]="dates" placeholder="Date" class="w-full md:w-56" />
-<p-select [options]="months" placeholder="Month" class="w-full md:w-56" />
-<p-select [options]="years()" placeholder="Year" class="w-full md:w-56" />
+<p-select [(ngModel)]="selectedDate"  [options]="dates" placeholder="Date" class="w-full md:w-56" #date (onChange)="onDateChange()"/>
+<p-select [(ngModel)]="selectedMonth" [options]="months" placeholder="Month" optionLabel="name" #month optionValue="index" class="w-full md:w-56" (onChange)="onDateChange()"/>
+<p-select [(ngModel)]="selectedYear"  [options]="years()" placeholder="Year" class="w-full md:w-56" #year (onChange)="onDateChange()"/>

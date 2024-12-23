@@ -5,63 +5,67 @@
     </div>
     <div class="content-container">
       <div class="content d-flex">
-        <section class="main">
+        <section class="main" [formGroup]="infoForm" (ngSubmit)="submit()">
           <h2 class="title">Subscribe</h2>
           <small class="hint">to our Monthly Surprice Box</small>
           <hr />
           <h3 class="title">Contact Information</h3>
-          <div class="form-container d-flex f-column">
+          <div class="form-container d-flex f-column" formGroupName="contactInfo">
             <div class="d-flex f-column">
               <label class="thin-font" for="name">Your Name</label>
-              <input pInputText id="name" placeholder="e.g Osama Alshathri" />
-              <small class="error"
-                >Error Messages will go here</small
+              <input pInputText formControlName="name" id="name" placeholder="e.g Osama Alshathri" />
+              <small class="error" *ngIf="infoForm.get('contactInfo.name')?.hasError('required') && infoForm.get('contactInfo.name')?.touched"
+                >Required</small
               >
             </div>
             <div class="d-flex f-column">
               <label class="thin-font" for="email">Email</label>
-              <input pInputText id="email" placeholder="Osama@gmail.com" />
-              <small class="error"
-                >Error Messages will go here</small
+              <input pInputText id="email" formControlName="email" placeholder="Osama@gmail.com" />
+              <small class="error" *ngIf="infoForm.get('contactInfo.email')?.hasError('required') && infoForm.get('contactInfo.email')?.touched"
+                >Required</small
+              >
+              <small class="error" *ngIf="infoForm.get('contactInfo.email')?.hasError('email') && infoForm.get('contactInfo.email')?.touched"
+                >Invalid Email</small
               >
             </div>
           </div>
           <h3 class="title">Child's Information</h3>
-          <div class="form-container d-flex f-column">
+          <div class="form-container d-flex f-column" formGroupName="childInfo">
             <div class="d-flex f-column">
               <label class="thin-font" for="child-name"
                 >Child's Full Name</label
               >
               <input
                 pInputText
-                id="child-name"
+                id="child-name" formControlName="name"
                 placeholder="e.g Sara Mohammad"
               />
-              <small class="error"
-                >Error Messages will go here</small
+              <small class="error" *ngIf="infoForm.get('childInfo.name')?.hasError('required') && infoForm.get('childInfo.name')?.touched"
+                >Required</small
               >
             </div>
             <div class="form-container d-flex f-column">
               <label class="thin-font">Child's Date of Birth</label>
-              <app-date-select-input></app-date-select-input>
+              <app-date-select-input formControlName="dateOfBirth"></app-date-select-input>
             </div>
             <div class="form-container d-flex f-column">
               <label class="thin-font">Grade</label>
               <p-select
                 [options]="[1,2,3,4]"
-                placeholder="e.g Grade 2"
+                placeholder="e.g 2"
                 class="w-full md:w-56"
+                formControlName="grade"
               />
             </div>
-            <app-radio-group title="Gender" controlName="gender" [options]="['Boy', 'Girl']"></app-radio-group>
+            <app-radio-group title="Gender" formControlName="gender" controlName="gender" [options]="[{id: 1, name: 'Boy'}, {id: 2, name: 'Girl'}]" optionLabel="name" optionValue="id"></app-radio-group>
             <h3 class="title">As a parent select any 3 topics</h3>
             <div class="form-container d-flex">
-              <p-selectbutton [options]="topics" [multiple]="true" />
+              <p-selectbutton [options]="topics" formControlName="topics" [multiple]="true" />
             </div>
           </div>
 
           <div class="d-flex">
-            <button class="shadow-btn">Continue to Payment</button>
+            <button class="shadow-btn" (click)="submit()">Continue to Payment</button>
           </div>
         </section>
         <section class="summary">

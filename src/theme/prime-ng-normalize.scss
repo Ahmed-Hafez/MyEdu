@@ -7,6 +7,11 @@
   --p-togglebutton-content-checked-background: #{$softLavender} !important;
   --p-togglebutton-hover-background: transparent !important;
   --p-togglebutton-hover-color: #{$lightLavender} !important;
+  --p-form-field-focus-border-color: #{$lightGray} !important;
+  --p-select-option-selected-focus-color: #{$lightLavender} !important;
+  --p-select-option-selected-focus-background: #{$softLavender} !important;
+  --p-select-option-selected-background: #{$softLavender} !important;
+  --p-select-option-selected-color: #{$lightLavender} !important;
 }
 
 .p-inputtext:enabled:focus {
@@ -27,10 +32,11 @@ body [class*="p-"] {
 
 .p-togglebutton.p-togglebutton-checked {
   border: 1px solid $lightLavender;
+  background: $softLavender !important;
 }
 
 .p-togglebutton {
-  border: 1px solid #ccc;
+  border: 1px solid $lightGray;
 }
 
 .p-togglebutton:hover {
@@ -38,7 +44,7 @@ body [class*="p-"] {
 }
 
 .p-togglebutton {
-  border: 1px solid #ccc !important;
+  border: 1px solid $lightGray !important;
   border-radius: 15px !important;
 }
 
