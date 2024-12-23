@@ -64,9 +64,6 @@ export class SubscribePage {
   });
 
   submit() {
-    console.log(this.infoForm.get('childInfo.dateOfBirth'))
-    console.log(this.infoForm)
     console.log(this.infoForm.value)
-    console.log(this.infoForm.valid)
   }
 }
